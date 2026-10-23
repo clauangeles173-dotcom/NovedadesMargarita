@@ -10,7 +10,7 @@ public class DetallePedido {
  private int cantidad;
  private double precioUnitario;
  
-public DetallePedido(Producto producto, cantidad int){
+public DetallePedido(Producto producto,int cantidad ){
 
 }
  
