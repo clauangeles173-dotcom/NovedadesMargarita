@@ -90,7 +90,19 @@ public class NovedadesMargarita {
               
               System.out.println( "Disponible final: " + inventario.getCantidadDisponible());
              
+         // 6. Pedido
          
+          System.out.println("\nPEDIDO: PRUEBA DEL BORRADOR");
+          
+          Pedido pedido = new Pedido(cliente.getCodigoCliente());
+          
+          System.out.println("Pedido: " + pedido.getCodigoPedido());
+          System.out.println("Cliente: " + pedido.getCodigoCliente());
+          System.out.println("Estado inicial: " + pedido.getEstado());
+          
+          System.out.println("Cancelar: " + pedido.cancelar());
+           System.out.println("Cancelar otra vez: " + pedido.cancelar());
+           System.out.println("Estado final: " + pedido.getEstado());
          
         
         
