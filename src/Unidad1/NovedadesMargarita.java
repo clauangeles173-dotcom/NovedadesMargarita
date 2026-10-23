@@ -127,14 +127,17 @@ public class NovedadesMargarita {
             
             System.out.println("Estado de esa reserva: " + reservaLiberada.getEstado());
             
+             // 8. Entrega
+             
+             System.out.println("\nENTREGA: PRUEBA DEL REGISTRO");
             
-            
+        Entrega entrega = new Entrega(reservaEntrega.getCodigoPedido(), "23/10/2026 10:30");
+        
+        System.out.println("Codigo del pedido: " + entrega.getCodigoPedido());
+        System.out.println("Fecha registrada: " + entrega.getFechaEntrega());
         
         
-        
-        
-        
-        
+ 
         
     }
    
