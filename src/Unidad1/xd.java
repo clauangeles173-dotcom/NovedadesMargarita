@@ -10,8 +10,7 @@ package Unidad1;
  */
 public class xd {
     public static void main(String[] args) {
-        // 1. CLIENTE
-        // Crear un cliente, consultar sus datos y actualizar su teléfono.
+        // 1. Cliente
 
         System.out.println("CLIENTE");
 
@@ -25,8 +24,7 @@ public class xd {
         System.out.println("Telefono actualizado: " + cliente.getTelefono());
 
 
-        // 2. PRODUCTO
-        // Utilizar los dos constructores sobrecargados.
+        // 2. Producto
 
         System.out.println("\nPRODUCTOS");
 
@@ -44,8 +42,7 @@ public class xd {
         System.out.println("Descripcion del polo: " + polo.getDescripcion());
 
 
-        // 3. CATALOGO
-        // Probar el constructor sin parámetros y el parametrizado.
+        // 3. Catalogo
 
         System.out.println("\nCATALOGO");
 
@@ -62,8 +59,7 @@ public class xd {
                 catalogo.getNombre() + ": " + catalogo.getDescripcion());
 
 
-        // 4. DETALLEPEDIDO
-        // El detalle conserva el precio recibido al crearse.
+        // 4. Detallepedido
 
         System.out.println("\nDETALLE DEL PRODUCTO");
 
@@ -81,8 +77,7 @@ public class xd {
         System.out.println("Subtotal conservado: " + detalle.getSubtotal());
 
 
-        // 5. INVENTARIO
-        // Prueba independiente de ingresos, reservas y entregas de unidades.
+        // 5. Inventario
 
         System.out.println("\nINVENTARIO: PRUEBA INDEPENDIENTE");
 
@@ -98,7 +93,7 @@ public class xd {
         System.out.println(
                 "Disponible: " + inventario.getCantidadDisponible());
 
-        // Debe devolver false porque no hay 20 unidades disponibles.
+        
         System.out.println(
                 "Reservar 20: " + inventario.reservarUnidades(20));
 
@@ -118,8 +113,7 @@ public class xd {
                 "Disponible final: " + inventario.getCantidadDisponible());
 
 
-        // 6. PEDIDO
-        // Crear un borrador y comprobar que solo puede cancelarse una vez.
+        // 6. Pedido
 
         System.out.println("\nPEDIDO: PRUEBA DEL BORRADOR");
 
@@ -135,9 +129,7 @@ public class xd {
         System.out.println("Estado final: " + pedido.getEstado());
 
 
-        // 7. RESERVA
-        // Pruebas independientes de los cambios de estado.
-        // PED-DEMO son códigos de ejemplo, sin un Pedido registrado aquí.
+        // 7. Reserva
 
         System.out.println("\nRESERVA: PRUEBAS INDEPENDIENTES DE ESTADO");
 
@@ -165,8 +157,7 @@ public class xd {
                 "Estado de esa reserva: " + reservaLiberada.getEstado());
 
 
-        // 8. ENTREGA
-        // Crear un registro con una fecha ingresada como texto.
+        // 8. Entrega
 
         System.out.println("\nENTREGA: PRUEBA DEL REGISTRO");
 
