@@ -7,6 +7,10 @@ public class Catalogo {
     private String descripcion;
     
     //Constructor Catalogo, donde valida el la existencia del parametro nombre y el parametro descripcion
+   
+    public Catalogo(){
+        
+    }
     public Catalogo(String nombre, String descripcion) {
         if (nombre == null || nombre.trim().isEmpty()) {
             throw new IllegalArgumentException(
