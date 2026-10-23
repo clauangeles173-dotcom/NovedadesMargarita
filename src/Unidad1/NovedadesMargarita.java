@@ -50,7 +50,46 @@ public class NovedadesMargarita {
             
             System.out.println(catalogo.getNombre() + ": " + catalogo.getDescripcion());
             
+            // 4. Detallepedido
             
+            System.out.println("\nDETALLE DEL PRODUCTO");
+            
+            DetallePedido detalle = new DetallePedido( polo.getCodigoProducto(), 3, polo.getPrecio());
+            
+            System.out.println("Producto: " + detalle.getCodigoProducto());
+             System.out.println("Cantidad: " + detalle.getCantidad());
+             System.out.println("Precio aplicado: " + detalle.getPrecioUnitario());
+             System.out.println("Subtotal: " + detalle.getSubtotal());
+             
+             polo.setPrecio(25.0);
+             
+             System.out.println("Precio vigente actualizado: " + polo.getPrecio());
+             System.out.println("Subtotal conservado: " + detalle.getSubtotal());
+             
+             // 5. Inventario
+             
+             System.out.println("\nINVENTARIO: PRUEBA INDEPENDIENTE");
+             
+             Inventario inventario = new Inventario( polo.getCodigoProducto(), 10);
+             
+             System.out.println("Ingreso de 5: " + inventario.registrarIngreso(5));
+             
+             System.out.println("Reserva de 3: " + inventario.reservarUnidades(3));
+             
+              System.out.println("Disponible: " + inventario.getCantidadDisponible());
+              
+              System.out.println("Reservar 20: " + inventario.reservarUnidades(20));
+              
+              System.out.println( "Entregar 2: " + inventario.registrarEntrega(2));
+              
+              System.out.println("Liberar 1: " + inventario.liberarUnidades(1));
+              
+              System.out.println("Fisica final: " + inventario.getCantidadFisica());
+              
+              System.out.println( "Reservada final: " + inventario.getCantidadReservada());
+              
+              System.out.println( "Disponible final: " + inventario.getCantidadDisponible());
+             
          
          
         
