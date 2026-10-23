@@ -29,3 +29,22 @@ public class Catalogo {
     public String getDescripcion() {
         return descripcion;
     }
+    //Metodo setNombre, validando que exista un nombre de catalogo
+   public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException(
+                    "El nombre del catalogo es obligatorio.");
+        }
+
+        this.nombre = nombre.trim();
+    }
+
+    //Metodo setDescripcion, si guarda null, guarda una cadena vacia, si llega un texto, quita los espacios del inicio y final
+    public void setDescripcion(String descripcion) {
+        if (descripcion == null) {
+            this.descripcion = "";
+        } else {
+            this.descripcion = descripcion.trim();
+        }
+    } 
+}
