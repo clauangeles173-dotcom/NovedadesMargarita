@@ -46,7 +46,7 @@ public class Cliente {
     }
     
     // Getter para nombres. Devuelve el nombre actual. 
-    public String getNombres() {
+    public String getNombre() {
         return nombres;
     }
     

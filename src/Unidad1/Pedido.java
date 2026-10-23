@@ -3,34 +3,60 @@
 package Unidad1;
 
 public class Pedido {
-   private String codigoPedido;
-   private final static int contadorPedidos = 0;
-   private String estado;
+  
+
+    
+    private final String codigoPedido;
+
+    
+    private static int contadorPedidos = 0;
+
    
-   public String getcodigoPedido (){
-       return codigoPedido;
-   }
-   public String getestado (){
-       return estado;
-   }
-   public boolean retirarDetalle(String codigoProducto){
-       if (!"BORRADOR".equals(estado) || codigoProducto == null || codigoProducto.trim().isEmpty()) {
-           return false;
-       }
-       for (int i = 0; i < detalles.size(); i++) {
-           if (detalles.get(i).getProducto().getCodigoProducto().equals(codigoProducto.trim())) {
-               detalles.remove(i);
-           return true;
-           }
-       }
-       return false;
-   }
-   public double calcularTotal() {
-       double total = 0;
-       for (DetallePedido detalle : detalles) {
-           total += detalle.getSubtotal();
-       }
-       return total;
-   }
+    private final String codigoCliente;
+
+   
+    private String estado = "BORRADOR";
+
+    
+
+    public Pedido(String codigoCliente) {
+       
+        if (codigoCliente == null || codigoCliente.trim().isEmpty()) {
+            throw new IllegalArgumentException(
+                    "El codigo del cliente es obligatorio.");
+        }
+
+        
+        contadorPedidos++;
+
+        this.codigoPedido =
+                String.format("PED-%04d", contadorPedidos);
+
+        this.codigoCliente = codigoCliente.trim();
+    }
+
+   
+
+    public String getCodigoPedido() {
+        return codigoPedido;
+    }
+
+    public String getCodigoCliente() {
+        return codigoCliente;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    
+    public boolean cancelar() {
+        if (!"BORRADOR".equals(estado)) {
+            return false;
+        }
+
+        this.estado = "CANCELADO";
+        return true;
+    }
 }
    
