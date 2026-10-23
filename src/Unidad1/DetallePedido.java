@@ -21,15 +21,24 @@ public class DetallePedido {
             throw new IllegalArgumentException(
                     "El codigo del producto es obligatorio.");
         }
+        else{
+                    this.codigoProducto = codigoProducto.trim();
+        }
 
         if (cantidad <= 0) {
             throw new IllegalArgumentException(
                     "La cantidad debe ser mayor que cero.");
         }
+        else{
+                this.cantidad = cantidad;
+        }
 
         if (!Double.isFinite(precioUnitario) || precioUnitario < 0) {
             throw new IllegalArgumentException(
                     "El precio debe ser finito y no negativo.");
+        }
+        else{
+                this.precioUnitario = precioUnitario;
         }
 
         
@@ -38,9 +47,6 @@ public class DetallePedido {
                     "El subtotal supera el rango permitido.");
         }
 
-        this.codigoProducto = codigoProducto.trim();
-        this.cantidad = cantidad;
-        this.precioUnitario = precioUnitario;
     }
 
     
