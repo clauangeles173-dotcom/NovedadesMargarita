@@ -37,6 +37,21 @@ public class NovedadesMargarita {
          
          System.out.println("Descripcion del polo: " + polo.getDescripcion());
          
+         // 3. Catalogo
+         
+         System.out.println("\nCATALOGO");
+         
+         Catalogo general = new Catalogo();
+           Catalogo catalogo = new Catalogo( "Margarita", "Productos de la tienda");
+           
+            System.out.println("Nombre por defecto: " + general.getNombre());
+            
+            catalogo.setDescripcion("Novedades y accesorios");
+            
+            System.out.println(catalogo.getNombre() + ": " + catalogo.getDescripcion());
+            
+            
+         
          
         
         
