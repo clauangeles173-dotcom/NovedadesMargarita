@@ -22,6 +22,29 @@ public class NovedadesMargarita {
         cliente.setTelefono("912345678");
         
         System.out.println("Telefono actualizado: " + cliente.getTelefono());
+        
+         // 2. Producto
+         
+         System.out.println("\nPRODUCTOS");
+         
+         Producto polo = new Producto(
+                  "Polo negro talla M", "Algodon", 20.0);
+         
+         Producto pulsera = new Producto("Pulsera", 8.0);
+         System.out.println(polo.getCodigoProducto() + ": " + polo.getNombre());
+         
+         System.out.println( pulsera.getCodigoProducto() + ": " + pulsera.getNombre());
+         
+         System.out.println("Descripcion del polo: " + polo.getDescripcion());
+         
+         
+        
+        
+        
+        
+        
+        
+        
     }
    
     
