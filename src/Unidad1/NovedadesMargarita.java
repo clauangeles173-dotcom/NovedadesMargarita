@@ -103,7 +103,32 @@ public class NovedadesMargarita {
           System.out.println("Cancelar: " + pedido.cancelar());
            System.out.println("Cancelar otra vez: " + pedido.cancelar());
            System.out.println("Estado final: " + pedido.getEstado());
+           
+           // 7. Reserva
          
+           System.out.println("\nRESERVA: PRUEBAS INDEPENDIENTES DE ESTADO");
+           
+           Reserva reservaEntrega = new Reserva("PED-DEMO-1");
+           
+           System.out.println("Estado inicial: " + reservaEntrega.getEstado());
+            System.out.println("Activar: " + reservaEntrega.activar());
+            
+            System.out.println("Completar: " + reservaEntrega.completarEntrega());
+            
+            System.out.println("Completar otra vez: " + reservaEntrega.completarEntrega());
+            
+            System.out.println("Estado final: " + reservaEntrega.getEstado());
+            
+            Reserva reservaLiberada = new Reserva("PED-DEMO-2");
+            
+            reservaLiberada.activar();
+            
+            System.out.println("Liberar otra reserva activa: " + reservaLiberada.liberar());
+            
+            System.out.println("Estado de esa reserva: " + reservaLiberada.getEstado());
+            
+            
+            
         
         
         
